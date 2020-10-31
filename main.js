@@ -10,17 +10,90 @@ function eventAdd(){
 	});
 }
 eventAdd();
-
 function createElement(el,text){
 	let element = document.createElement(el);
 	element.textContent = text;
 	return element;
 }
-
 function getValFrom(ref){
 	return document.querySelector(ref).value;
 }
 button.addEventListener('click',()=>{
-	ul.prepend(createElement("li",getValFrom('#input')));
-	eventAdd();
+	if(getValFrom('#input')===''){
+		alert("No Text in Input");
+	}
+	else{
+		ul.prepend(createElement("li",getValFrom('#input')));
+		eventAdd();
+	}
 });
+const request = new XMLHttpRequest();
+
+request.addEventListener('readystatechange',()=>{
+	console.log(request,request.readyState);
+	if(request.readyState === 4){
+		addToDocument(request.responseText);
+	}
+});
+
+function addToDocument(added){
+	let div = document.querySelector('div');
+	let element = document.createElement("p");
+	element.textContent = added;
+	div.prepend(element);
+}
+const request = new XMLHttpRequest();
+
+request.addEventListener('readystatechange',()=>{
+	console.log(request,request.readyState);
+	if(request.readyState === 4){
+		addToDocument(request.responseText);
+	}
+});
+const request = new XMLHttpRequest();
+
+request.addEventListener('readystatechange',()=>{
+	console.log(request,request.readyState);
+	if(request.readyState === 4){
+		addToDocument(request.responseText);
+	}
+});
+const request = new XMLHttpRequest();
+
+request.addEventListener('readystatechange',()=>{
+	console.log(request,request.readyState);
+	if(request.readyState === 4){
+		addToDocument(request.responseText);
+	}
+});
+
+function addToDocument(added){
+	let div = document.querySelector('div');
+	let element = document.createElement("p");
+	element.textContent = added;
+	div.prepend(element);
+}
+
+request.open('GET','https://jsonplaceholder.typicode.com/todos');
+request.send();
+function addToDocument(added){
+	let div = document.querySelector('div');
+	let element = document.createElement("p");
+	element.textContent = added;
+	div.prepend(element);
+}
+
+request.open('GET','https://jsonplaceholder.typicode.com/todos');
+request.send();
+function addToDocument(added){
+	let div = document.querySelector('div');
+	let element = document.createElement("p");
+	element.textContent = added;
+	div.prepend(element);
+}
+
+request.open('GET','https://jsonplaceholder.typicode.com/todos');
+request.send();
+
+request.open('GET','https://jsonplaceholder.typicode.com/todos');
+request.send();

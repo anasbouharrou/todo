@@ -12,11 +12,14 @@ ul li{
 	list-style-type: none;
 	padding: 10px;
 	background: #ededeb;
-	width: 25%;
 	border: #deddd9 solid 1px;
 	margin: 10px;
 	padding: 15px;
 	font-family: 'Ubuntu', sans-serif;
+	width: 60%;
+	display: block;
+	margin:auto;
+	margin-top: 10px;
 }
 
 ul li:hover{
@@ -25,18 +28,21 @@ ul li:hover{
 
 input{
 	display: block;
-	width:25%;
+	width:60%;
 	padding:10px;
 	margin: 20px;
 	border: solid 1px #deddd9;
 	font-family: 'Ubuntu', sans-serif;
+	margin: auto;
 }
 
 button{
-	width:25%;
+	width:60%;
 	padding:10px;
 	background:#f2f2eb;
 	font-family: 'Ubuntu', sans-serif;
-	margin-left: 30px;
+	display: block;
 	border: solid 1px #deddd9;
+	margin: auto;
+	margin-top: 10px;
 }
